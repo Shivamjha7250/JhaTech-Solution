@@ -619,7 +619,7 @@ export default function ServicesPage() {
           <div className="relative h-[320px] lg:h-full min-h-[320px] overflow-hidden">
 
             <Image
-              src="/about1.jpg"
+              src="/contact.png"
               alt="Digital Solution Engineering"
               fill
               className="object-cover opacity-90"

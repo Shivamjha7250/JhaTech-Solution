@@ -173,7 +173,7 @@ export default function PortfolioPage() {
     category: "Web Development",
     title: "Business Website Platform",
     icon: <FaGlobe />,
-    image: "/about1.jpg",
+    image: "/fot1.png",
     tags: ["Next.js", "Tailwind CSS", "MongoDB"],
     desc:
       "Modern responsive business website with SEO optimization and scalable architecture.",
@@ -184,7 +184,7 @@ export default function PortfolioPage() {
     category: "Ecommerce",
     title: "Online Ecommerce Store",
     icon: <FaShoppingCart />,
-    image: "/about2.jpg",
+    image: "/fot2.png",
     tags: ["React", "Node.js", "Payment Gateway"],
     desc:
       "Complete ecommerce platform with secure checkout and admin dashboard.",
@@ -195,7 +195,7 @@ export default function PortfolioPage() {
     category: "Mobile App",
     title: "Delivery Management App",
     icon: <FaMobileAlt />,
-    image: "/about3.jpg",
+    image: "/fot3.png",
     tags: ["React Native", "Firebase", "Maps API"],
     desc:
       "Real-time mobile application for delivery tracking and order systems.",
@@ -206,7 +206,7 @@ export default function PortfolioPage() {
     category: "AI Solutions",
     title: "AI Chat Assistant",
     icon: <FaBrain />,
-    image: "/about1.jpg",
+    image: "/fot4.png",
     tags: ["OpenAI", "Python", "API"],
     desc:
       "AI-powered chatbot for smart automation and customer support.",
@@ -217,7 +217,7 @@ export default function PortfolioPage() {
     category: "Backend Development",
     title: "Secure Backend System",
     icon: <FaServer />,
-    image: "/about2.jpg",
+    image: "/fot5.png",
     tags: ["Node.js", "JWT", "Express"],
     desc:
       "Scalable backend APIs with authentication and secure infrastructure.",
@@ -228,7 +228,7 @@ export default function PortfolioPage() {
     category: "Cloud Solutions",
     title: "Cloud Dashboard",
     icon: <FaCloud />,
-    image: "/about3.jpg",
+    image: "/fot6.png",
     tags: ["AWS", "Cloud", "Dashboard"],
     desc:
       "Modern cloud dashboard with analytics and monitoring systems.",
@@ -239,7 +239,7 @@ export default function PortfolioPage() {
     category: "Custom Software",
     title: "CRM Management System",
     icon: <FaCode />,
-    image: "/about1.jpg",
+    image: "/fot7.png",
     tags: ["CRM", "Admin Panel", "Database"],
     desc:
       "Custom CRM system for business management and workflow automation.",
@@ -250,7 +250,7 @@ export default function PortfolioPage() {
     category: "SEO Optimization",
     title: "SEO Growth Platform",
     icon: <FaChartLine />,
-    image: "/about2.jpg",
+    image: "/fot8.png",
     tags: ["SEO", "Analytics", "Optimization"],
     desc:
       "SEO optimization platform designed for higher Google rankings.",
@@ -261,7 +261,7 @@ export default function PortfolioPage() {
     category: "Website Design",
     title: "Portfolio Website",
     icon: <FaLaptopCode />,
-    image: "/about3.jpg",
+    image: "/fot9.png",
     tags: ["UI UX", "Portfolio", "Responsive"],
     desc:
       "Modern portfolio website with premium animations and responsive layout.",
@@ -272,7 +272,7 @@ export default function PortfolioPage() {
     category: "Bug Fixing",
     title: "Performance Optimization",
     icon: <FaBug />,
-    image: "/about1.jpg",
+    image: "/fot10.png",
     tags: ["Optimization", "Bug Fix", "Performance"],
     desc:
       "Application optimization with speed improvements and issue fixing.",
@@ -283,7 +283,7 @@ export default function PortfolioPage() {
     category: "Database System",
     title: "Enterprise Database",
     icon: <FaDatabase />,
-    image: "/about2.jpg",
+    image: "/fot11.png",
     tags: ["MongoDB", "SQL", "Cloud"],
     desc:
       "Secure enterprise database system with scalable architecture.",
@@ -294,7 +294,7 @@ export default function PortfolioPage() {
     category: "Enterprise Solutions",
     title: "Business Automation Platform",
     icon: <FaRocket />,
-    image: "/about3.jpg",
+    image: "/fot12.png",
     tags: ["Automation", "Business", "AI"],
     desc:
       "Enterprise automation platform for scalable business operations.",
@@ -643,7 +643,7 @@ export default function PortfolioPage() {
           <div className="relative h-[320px] lg:h-full min-h-[320px]">
 
             <Image
-              src="/about1.jpg"
+              src="/contact.png"
               alt="Modern Software Development"
               fill
               className="object-cover opacity-90"

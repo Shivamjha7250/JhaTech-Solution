@@ -273,7 +273,7 @@ export default function AboutPage() {
             <div className="absolute w-[350px] h-[350px] bg-blue-500/20 blur-[120px] rounded-full"></div>
 
             <Image
-              src="/about1.jpg"
+              src="/about1.png"
               alt="JhaTech Solution Website Development"
               width={650}
               height={650}
@@ -628,7 +628,7 @@ export default function AboutPage() {
           <div className="relative h-[320px] lg:h-full min-h-[350px]">
 
             <Image
-              src="/about2.jpg"
+              src="/contact.png"
               alt="JhaTech Solution Software Development"
               fill
               className="object-cover opacity-90"
