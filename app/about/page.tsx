@@ -1,5 +1,7 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import type { Metadata } from "next";
+
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -15,47 +17,47 @@ import {
   FaChartLine,
   FaShoppingCart,
   FaServer,
-  FaLaptopCode,
   FaDatabase,
   FaWhatsapp,
   FaCloud,
   FaBug,
+  FaBrain,
+  FaUsers,
 } from "react-icons/fa";
 
-/* SEO META DATA */
-export const metadata = {
+/* =========================
+   SEO META DATA
+========================= */
+
+export const metadata: Metadata = {
   title:
-    "JhaTech Solution | Website Development Company India USA Canada",
+    "About JhaTech Solution | Website Development Company",
 
   description:
-    "JhaTech Solution is a professional website development and app development company providing ecommerce solutions, SEO optimization, backend systems, bug fixing, AI integrations, cloud infrastructure, and scalable digital services across Mumbai Maharashtra, Delhi, Bihar, Punjab, India, USA, and Canada.",
+    "Learn about JhaTech Solution, founded by Shivam Kumar Jha. We provide professional website development, app development, ecommerce systems, SEO optimization, backend development, bug fixing, cloud infrastructure, and scalable digital solutions across India, USA, and Canada.",
 
   keywords: [
-    "JhaTech Solution",
+    "About JhaTech Solution",
+    "Shivam Kumar Jha",
     "Website Development Company",
     "App Development Company",
     "SEO Optimization",
-    "Ecommerce Development",
     "Custom Software Development",
-    "Backend Development",
-    "Cloud Infrastructure",
-    "Bug Fixing Services",
+    "Ecommerce Website",
     "React Developer",
     "Next.js Developer",
-    "Business Website",
+    "Backend Development",
+    "Cloud Infrastructure",
+    "Mumbai Website Developer",
+    "Delhi Web Developer",
+    "Bihar Website Development",
+    "Punjab Web Design",
     "Software Company India",
     "Website Development USA",
     "Website Development Canada",
-    "Mumbai Website Developer",
-    "Delhi Website Development",
-    "Bihar Web Design",
-    "Punjab Web Developer",
-    "AI Integration",
-    "Modern Digital Solutions",
-    "Admin Dashboard",
-    "CRM Development",
+    "Digital Agency",
     "UI UX Design",
-    "Mobile App Solutions",
+    "Bug Fixing Services",
   ],
 
   authors: [
@@ -71,40 +73,28 @@ export const metadata = {
   publisher:
     "JhaTech Solution",
 
-  category:
-    "Technology",
-
   metadataBase:
     new URL("https://jhatechsolution.vercel.app"),
 
   alternates: {
     canonical:
-      "https://jhatechsolution.vercel.app",
+      "https://jhatechsolution.vercel.app/about",
   },
 
   robots: {
     index: true,
     follow: true,
-    nocache: false,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: false,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
 
   openGraph: {
     title:
-      "JhaTech Solution | Modern Digital Solutions",
+      "About JhaTech Solution",
 
     description:
-      "Professional website development, ecommerce systems, SEO optimization, app development, AI integrations, and scalable digital products.",
+      "Professional website development, mobile applications, ecommerce systems, SEO optimization, and scalable digital solutions.",
 
     url:
-      "https://jhatechsolution.vercel.app",
+      "https://jhatechsolution.vercel.app/about",
 
     siteName:
       "JhaTech Solution",
@@ -126,20 +116,12 @@ export const metadata = {
     card: "summary_large_image",
 
     title:
-      "JhaTech Solution",
+      "About JhaTech Solution",
 
     description:
-      "Professional website development and digital services company.",
+      "Modern website development and software solutions company.",
 
     images: ["/logo.png"],
-
-    creator:
-      "@jhatechsolution",
-  },
-
-  verification: {
-    google:
-      "google-site-verification-code",
   },
 
   other: {
@@ -156,23 +138,14 @@ export const metadata = {
       "Mumbai, Maharashtra, India",
 
     serviceAreas:
-      "Mumbai, Maharashtra, Delhi, Bihar, Punjab, India, USA, Canada",
-
-    businessType:
-      "Website Development Company",
+      "Mumbai, Delhi, Bihar, Punjab, India, USA, Canada",
 
     supportEmail:
       "back2tocampus@gmail.com",
-
-    instagram:
-      "https://www.instagram.com/jhatechsolution",
-
-    linkedin:
-      "https://www.linkedin.com/company/jhatech-solution/",
   },
 };
 
-export default function Home() {
+export default function AboutPage() {
 
   return (
 
@@ -181,7 +154,7 @@ export default function Home() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="pt-36 pb-28 px-6 relative border-b border-zinc-900 overflow-hidden">
+      <section className="pt-36 pb-24 px-6 border-b border-zinc-900 relative overflow-hidden">
 
         {/* BLUR */}
         <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-500/20 blur-[140px] rounded-full"></div>
@@ -193,19 +166,15 @@ export default function Home() {
 
             <p className="text-blue-500 uppercase tracking-[4px] text-[11px] font-semibold mb-5">
 
-              MODERN DIGITAL SOLUTIONS
+              ABOUT JHATECH SOLUTION
 
             </p>
 
             <h1 className="text-5xl md:text-7xl font-black leading-[1.05] tracking-tight">
 
-              Jha
-              <span className="text-blue-500">
-                Tech
-              </span>
-
+              Modern Digital
               <span className="block text-blue-500">
-                Solution
+                Solutions Company
               </span>
 
             </h1>
@@ -213,19 +182,34 @@ export default function Home() {
             <p className="text-zinc-400 text-sm md:text-lg leading-8 mt-8 max-w-2xl">
 
               JhaTech Solution is a professional software engineering
-              and digital services company
-              providing premium website development,
-              mobile app development,
-              ecommerce platforms,
+              and digital services company founded by
+              Shivam Kumar Jha.
+              We specialize in website development,
+              mobile applications,
+              ecommerce systems,
               SEO optimization,
               backend architecture,
-              cloud infrastructure,
               bug fixing,
-              and scalable custom software solutions
-              for startups,
-              businesses,
+              cloud infrastructure,
+              and scalable custom software solutions.
+
+            </p>
+
+            <p className="text-zinc-500 text-sm md:text-base leading-8 mt-6 max-w-2xl">
+
+              We help startups,
               creators,
-              and enterprises worldwide.
+              local businesses,
+              and enterprises build fast,
+              secure,
+              scalable,
+              and modern digital products
+              using technologies like React,
+              Next.js,
+              Node.js,
+              MongoDB,
+              cloud deployment,
+              and AI-powered systems.
 
             </p>
 
@@ -277,48 +261,7 @@ export default function Home() {
                 Contact Us
               </Link>
 
-             
-
-            </div>
-
-            {/* STATS */}
-            <div className="grid grid-cols-3 gap-6 mt-14">
-
-              <div>
-
-                <h2 className="text-3xl font-black text-blue-500">
-                  50+
-                </h2>
-
-                <p className="text-zinc-400 text-sm mt-2">
-                  Projects Delivered
-                </p>
-
-              </div>
-
-              <div>
-
-                <h2 className="text-3xl font-black text-blue-500">
-                  100%
-                </h2>
-
-                <p className="text-zinc-400 text-sm mt-2">
-                  Client Satisfaction
-                </p>
-
-              </div>
-
-              <div>
-
-                <h2 className="text-3xl font-black text-blue-500">
-                  24/7
-                </h2>
-
-                <p className="text-zinc-400 text-sm mt-2">
-                  Technical Support
-                </p>
-
-              </div>
+            
 
             </div>
 
@@ -351,17 +294,89 @@ export default function Home() {
 
       </section>
 
+      {/* STATS */}
+      <section className="px-6 py-20 border-b border-zinc-900">
+
+        <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-6">
+
+          <div className="bg-zinc-950 border border-zinc-900 rounded-3xl p-8 text-center">
+
+            <div className="text-blue-500 text-3xl flex justify-center mb-4">
+              <FaRocket />
+            </div>
+
+            <h2 className="text-4xl font-black text-blue-500">
+              50+
+            </h2>
+
+            <p className="text-zinc-400 text-sm mt-3">
+              Projects Delivered
+            </p>
+
+          </div>
+
+          <div className="bg-zinc-950 border border-zinc-900 rounded-3xl p-8 text-center">
+
+            <div className="text-green-500 text-3xl flex justify-center mb-4">
+              <FaShieldAlt />
+            </div>
+
+            <h2 className="text-4xl font-black text-green-500">
+              100%
+            </h2>
+
+            <p className="text-zinc-400 text-sm mt-3">
+              Client Satisfaction
+            </p>
+
+          </div>
+
+          <div className="bg-zinc-950 border border-zinc-900 rounded-3xl p-8 text-center">
+
+            <div className="text-red-500 text-3xl flex justify-center mb-4">
+              <FaUsers />
+            </div>
+
+            <h2 className="text-4xl font-black text-red-500">
+              Global
+            </h2>
+
+            <p className="text-zinc-400 text-sm mt-3">
+              Worldwide Clients
+            </p>
+
+          </div>
+
+          <div className="bg-zinc-950 border border-zinc-900 rounded-3xl p-8 text-center">
+
+            <div className="text-yellow-500 text-3xl flex justify-center mb-4">
+              <FaChartLine />
+            </div>
+
+            <h2 className="text-4xl font-black text-yellow-500">
+              24/7
+            </h2>
+
+            <p className="text-zinc-400 text-sm mt-3">
+              Technical Support
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
       {/* SERVICES */}
       <section className="px-6 py-24 border-b border-zinc-900">
 
         <div className="max-w-7xl mx-auto">
 
-          {/* TOP */}
           <div className="text-center mb-16">
 
             <p className="text-blue-500 uppercase tracking-[4px] text-[11px] font-semibold mb-4">
 
-              OUR SERVICES
+              WHAT WE PROVIDE
 
             </p>
 
@@ -376,16 +391,13 @@ export default function Home() {
 
             <p className="text-zinc-400 text-sm md:text-base leading-8 mt-6 max-w-3xl mx-auto">
 
-              We provide complete software engineering
+              We deliver modern software engineering
               and digital solutions
-              including websites,
-              mobile apps,
-              ecommerce systems,
-              SEO optimization,
-              backend development,
-              cloud deployment,
-              AI integrations,
-              and custom software platforms.
+              for startups,
+              businesses,
+              ecommerce brands,
+              creators,
+              and enterprises.
 
             </p>
 
@@ -406,10 +418,10 @@ export default function Home() {
 
               <p className="text-zinc-400 text-sm leading-7">
 
-                Modern responsive websites,
+                Modern responsive business websites,
                 landing pages,
                 admin dashboards,
-                and scalable frontend systems.
+                and scalable web systems.
 
               </p>
 
@@ -428,8 +440,8 @@ export default function Home() {
               <p className="text-zinc-400 text-sm leading-7">
 
                 Android applications,
-                scalable mobile systems,
-                and premium UI experiences.
+                scalable mobile apps,
+                and premium user experiences.
 
               </p>
 
@@ -447,10 +459,9 @@ export default function Home() {
 
               <p className="text-zinc-400 text-sm leading-7">
 
-                Technical SEO optimization,
-                Google ranking improvement,
+                Technical SEO,
                 speed optimization,
-                and traffic growth.
+                and organic traffic growth.
 
               </p>
 
@@ -468,7 +479,7 @@ export default function Home() {
 
               <p className="text-zinc-400 text-sm leading-7">
 
-                Ecommerce systems with secure payments,
+                Ecommerce systems with secure payment gateways,
                 product management,
                 and admin dashboards.
 
@@ -488,9 +499,9 @@ export default function Home() {
 
               <p className="text-zinc-400 text-sm leading-7">
 
-                Secure APIs,
-                scalable databases,
+                Secure backend APIs,
                 authentication systems,
+                databases,
                 and cloud infrastructure.
 
               </p>
@@ -500,162 +511,21 @@ export default function Home() {
             <div className="bg-zinc-950 border border-zinc-900 rounded-3xl p-7 hover:border-blue-500/40 transition">
 
               <div className="text-blue-500 text-3xl mb-5">
-                <FaCode />
+                <FaBrain />
               </div>
 
               <h3 className="text-xl font-bold mb-4">
-                Custom Software
+                AI Integrations
               </h3>
 
               <p className="text-zinc-400 text-sm leading-7">
 
-                CRM systems,
-                admin panels,
-                dashboards,
-                and enterprise software solutions.
+                AI chatbots,
+                automation systems,
+                smart workflows,
+                and intelligent digital solutions.
 
               </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* WHY CHOOSE */}
-      <section className="px-6 py-24 border-b border-zinc-900">
-
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-
-          {/* IMAGE */}
-          <div className="relative">
-
-            <div className="absolute w-[350px] h-[350px] bg-blue-500/10 blur-[120px] rounded-full"></div>
-
-            <Image
-              src="/about2.jpg"
-              alt="Professional Software Development"
-              width={650}
-              height={650}
-              className="relative rounded-[32px] border border-zinc-900 object-cover"
-            />
-
-          </div>
-
-          {/* CONTENT */}
-          <div>
-
-            <p className="text-blue-500 uppercase tracking-[4px] text-[11px] font-semibold mb-4">
-
-              WHY CHOOSE US
-
-            </p>
-
-            <h2 className="text-3xl md:text-5xl font-black leading-tight">
-
-              Smart Solutions For
-              <span className="text-blue-500">
-                {" "}Modern Businesses
-              </span>
-
-            </h2>
-
-            <p className="text-zinc-400 text-sm md:text-base leading-8 mt-6">
-
-              JhaTech Solution focuses on creating fast,
-              secure,
-              scalable,
-              and modern digital systems
-              using technologies like React,
-              Next.js,
-              Node.js,
-              MongoDB,
-              cloud deployment,
-              and AI-powered infrastructure.
-
-            </p>
-
-            {/* FEATURES */}
-            <div className="grid sm:grid-cols-2 gap-5 mt-10">
-
-              <div className="bg-zinc-950 border border-zinc-900 rounded-2xl p-5">
-
-                <div className="text-blue-500 text-2xl mb-4">
-                  <FaRocket />
-                </div>
-
-                <h3 className="font-bold text-lg mb-2">
-                  Fast Performance
-                </h3>
-
-                <p className="text-zinc-400 text-sm leading-6">
-
-                  Optimized websites and applications
-                  with high-speed performance.
-
-                </p>
-
-              </div>
-
-              <div className="bg-zinc-950 border border-zinc-900 rounded-2xl p-5">
-
-                <div className="text-blue-500 text-2xl mb-4">
-                  <FaShieldAlt />
-                </div>
-
-                <h3 className="font-bold text-lg mb-2">
-                  Secure Systems
-                </h3>
-
-                <p className="text-zinc-400 text-sm leading-6">
-
-                  Protected databases,
-                  secure backend APIs,
-                  and authentication systems.
-
-                </p>
-
-              </div>
-
-              <div className="bg-zinc-950 border border-zinc-900 rounded-2xl p-5">
-
-                <div className="text-blue-500 text-2xl mb-4">
-                  <FaDatabase />
-                </div>
-
-                <h3 className="font-bold text-lg mb-2">
-                  Scalable Databases
-                </h3>
-
-                <p className="text-zinc-400 text-sm leading-6">
-
-                  Modern scalable infrastructure
-                  for startups and enterprises.
-
-                </p>
-
-              </div>
-
-              <div className="bg-zinc-950 border border-zinc-900 rounded-2xl p-5">
-
-                <div className="text-blue-500 text-2xl mb-4">
-                  <FaChartLine />
-                </div>
-
-                <h3 className="font-bold text-lg mb-2">
-                  Business Growth
-                </h3>
-
-                <p className="text-zinc-400 text-sm leading-6">
-
-                  SEO-focused systems
-                  designed for online business growth.
-
-                </p>
-
-              </div>
 
             </div>
 
@@ -690,9 +560,12 @@ export default function Home() {
 
             <p className="text-zinc-400 text-sm md:text-base leading-8 mt-6 max-w-xl">
 
-              We help businesses create modern,
+              We help startups,
+              creators,
+              ecommerce brands,
+              and businesses create modern,
               scalable,
-              and secure digital products
+              and secure digital systems
               with premium UI,
               optimized performance,
               and cloud-ready infrastructure.
@@ -722,14 +595,14 @@ export default function Home() {
                 "
               >
 
-                Get Started
+                Contact Us
 
                 <FaArrowRight />
 
               </Link>
 
               <Link
-                href="/portfolio"
+                href="/services"
                 className="
                   border
                   border-zinc-700
@@ -744,7 +617,7 @@ export default function Home() {
                   font-semibold
                 "
               >
-                View Portfolio
+                View Services
               </Link>
 
             </div>
@@ -755,7 +628,7 @@ export default function Home() {
           <div className="relative h-[320px] lg:h-full min-h-[350px]">
 
             <Image
-              src="/about3.jpg"
+              src="/about2.jpg"
               alt="JhaTech Solution Software Development"
               fill
               className="object-cover opacity-90"
