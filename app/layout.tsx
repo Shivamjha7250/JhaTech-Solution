@@ -18,6 +18,10 @@ export const metadata: Metadata = {
 
   description:
     "Professional website and app development company",
+
+  verification: {
+    google: "W-9DUfQlQSlAGoBP_QNvPh5vLw-pnr6_FiNmz_yXEOQ",
+  },
 };
 
 export default function RootLayout({
