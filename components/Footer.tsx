@@ -36,37 +36,47 @@ export default function Footer() {
           </div>
 
           {/* SERVICES */}
-          <div>
+         <div>
 
-            <h4 className="text-xl font-bold mb-5 text-white">
-              Services
-            </h4>
+  <h4 className="text-xl font-bold mb-5 text-white">
+    Company
+  </h4>
 
-            <ul className="space-y-3 text-zinc-400">
+  <ul className="space-y-3 text-zinc-400">
 
-              <li className="hover:text-blue-500 transition cursor-pointer">
-                Business Website
-              </li>
+    <li className="hover:text-blue-500 transition cursor-pointer">
+      <a href="/mission">
+        Our Mission
+      </a>
+    </li>
 
-              <li className="hover:text-blue-500 transition cursor-pointer">
-                Ecommerce Website
-              </li>
+    <li className="hover:text-blue-500 transition cursor-pointer">
+      <a href="/vision">
+        Our Vision
+      </a>
+    </li>
 
-              <li className="hover:text-blue-500 transition cursor-pointer">
-                SEO Optimization
-              </li>
+    <li className="hover:text-blue-500 transition cursor-pointer">
+      <a href="/family">
+        Our Family
+      </a>
+    </li>
 
-              <li className="hover:text-blue-500 transition cursor-pointer">
-                Bug Fixing
-              </li>
+    <li className="hover:text-blue-500 transition cursor-pointer">
+      <a href="/careers">
+        Careers
+      </a>
+    </li>
 
-              <li className="hover:text-blue-500 transition cursor-pointer">
-                Portfolio Website
-              </li>
+    <li className="hover:text-blue-500 transition cursor-pointer">
+      <a href="https://jhatechsolution.blogspot.com">
+        Blog
+      </a>
+    </li>
 
-            </ul>
+  </ul>
 
-          </div>
+</div>
 
           {/* QUICK LINKS */}
           <div>
