@@ -136,10 +136,9 @@ export const metadata = {
       "@jhatechsolution",
   },
 
-  verification: {
-    google:
-      "google-site-verification-code",
-  },
+ verification: {
+  google: "W-9DUfQlQSlAGoBP_QNvPh5vLw-pnr6_FiNmz_yXEOQ",
+},
 
   other: {
     founder:
