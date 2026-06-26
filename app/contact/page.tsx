@@ -264,7 +264,7 @@ export default function ContactPage() {
                   </h3>
 
                   <a
-                    href="https://maps.app.goo.gl/BnKDH1UmVzVJsvNA7"
+                    href=
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zinc-400 hover:text-blue-500 transition text-sm"
