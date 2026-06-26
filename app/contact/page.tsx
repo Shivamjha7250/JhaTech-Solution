@@ -188,10 +188,10 @@ export default function ContactPage() {
                   </h3>
 
                   <a
-                    href="mailto:back2tocampus@gmail.com"
-                    className="text-zinc-400 hover:text-blue-500 transition text-sm"
-                  >
-                    back2tocampus@gmail.com
+                         href="mailto:info.jhatechsolution@gmail.com"
+                          className="text-zinc-400 hover:text-blue-500 transition text-sm"
+                              >
+                            info.jhatechsolution@gmail.com
                   </a>
 
                 </div>
