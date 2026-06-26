@@ -227,7 +227,7 @@ export default function Footer() {
                   </p>
 
                   <a
-                    href="https://maps.app.goo.gl/BnKDH1UmVzVJsvNA7"
+                    href="https://share.google/WnFDYnHik6LNRVFi1"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white hover:text-red-500 transition"
