@@ -159,7 +159,7 @@ export const metadata = {
       "Website Development Company",
 
     supportEmail:
-      "back2tocampus@gmail.com",
+      "info.jhatechsolution@gmail.com",
   },
 };
 

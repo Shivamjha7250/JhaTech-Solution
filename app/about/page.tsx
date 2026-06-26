@@ -141,7 +141,7 @@ export const metadata: Metadata = {
       "Mumbai, Delhi, Bihar, Punjab, India, USA, Canada",
 
     supportEmail:
-      "back2tocampus@gmail.com",
+      "info.jhatechsolution@gmail.com",
   },
 };
 
