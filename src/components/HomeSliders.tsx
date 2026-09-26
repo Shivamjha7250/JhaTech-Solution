@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 ========================================================= */
 
 const technologies = [
-  ["AWS", "/icons/technologies/aws.png"],
+  ["AWS", "/icons/technologies/amazonaws.png"],
   ["Android", "/icons/technologies/android.png"],
   ["Angular", "/icons/technologies/angular.png"],
   ["Apple / iOS", "/icons/technologies/apple.png"],
@@ -16,7 +16,7 @@ const technologies = [
   ["CSS3", "/icons/technologies/css3.png"],
   ["Express", "/icons/technologies/express.png"],
   ["Firebase", "/icons/technologies/firebase.png"],
-  ["Flutter", "/icons/technologies/flutter.png"],
+  ["Flutter", "/icons/technologies/Flutter.png"],
   ["Google Cloud", "/icons/technologies/google-cloud.png"],
   ["HTML5", "/icons/technologies/html5.png"],
   ["Java", "/icons/technologies/java.png"],
@@ -32,7 +32,7 @@ const technologies = [
   ["React", "/icons/technologies/react.png"],
   ["Shopify", "/icons/technologies/shopify.png"],
   ["Supabase", "/icons/technologies/supabase.png"],
-  ["Tailwind CSS", "/icons/technologies/tailwind.png"],
+  ["Tailwind CSS", "/icons/technologies/tailwindcss.png"],
   ["TypeScript", "/icons/technologies/typescript.png"],
   ["Vue.js", "/icons/technologies/vue.png"],
   ["WooCommerce", "/icons/technologies/woocommerce.png"],
@@ -69,7 +69,7 @@ const testimonials = [
   {
     name: "Client Name",
     role: "Founder",
-    image: "/images/testimonials/person-02.png",
+    image: "/images/testimonials/person-02.png.png",
     text: "The communication was clear throughout the project. The website was responsive, modern and easy to manage.",
   },
   {
@@ -230,25 +230,81 @@ export function ClientLogoSlider() {
 
 export function TestimonialsSlider() {
   const [active, setActive] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
+  /* Detect mobile screen */
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+
+    window.addEventListener("resize", checkMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
+
+  /* Auto slide */
+  useEffect(() => {
+    const totalSlides = isMobile ? testimonials.length : 2;
+
+    setActive((current) => {
+      if (current >= totalSlides) {
+        return 0;
+      }
+
+      return current;
+    });
+
     const timer = setInterval(() => {
-      setActive((current) => (current + 1) % 2);
+      setActive((current) => (current + 1) % totalSlides);
     }, 5000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [isMobile]);
 
   return (
     <div>
-      <div className="overflow-hidden">
+      {/* =====================================================
+          MOBILE
+          ONE CARD AT A TIME
+      ====================================================== */}
+
+      <div className="overflow-hidden md:hidden">
         <div
-          className="flex transition-transform duration-1000 ease-in-out"
+          className="flex transition-transform duration-700 ease-in-out"
           style={{
             transform: `translateX(-${active * 100}%)`,
           }}
         >
-          <div className="grid min-w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {testimonials.map((testimonial) => (
+            <div
+              key={testimonial.text}
+              className="min-w-full px-0.5"
+            >
+              <TestimonialCard testimonial={testimonial} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* =====================================================
+          DESKTOP
+          THREE CARDS AT A TIME
+      ====================================================== */}
+
+      <div className="hidden overflow-hidden md:block">
+        <div
+          className="flex transition-transform duration-700 ease-in-out"
+          style={{
+            transform: `translateX(-${active * 100}%)`,
+          }}
+        >
+          {/* First 3 testimonials */}
+          <div className="grid min-w-full grid-cols-2 gap-5 lg:grid-cols-3">
             {testimonials.slice(0, 3).map((testimonial) => (
               <TestimonialCard
                 key={testimonial.text}
@@ -257,7 +313,8 @@ export function TestimonialsSlider() {
             ))}
           </div>
 
-          <div className="grid min-w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {/* Next 3 testimonials */}
+          <div className="grid min-w-full grid-cols-2 gap-5 lg:grid-cols-3">
             {testimonials.slice(3, 6).map((testimonial) => (
               <TestimonialCard
                 key={testimonial.text}
@@ -268,13 +325,23 @@ export function TestimonialsSlider() {
         </div>
       </div>
 
+      {/* =====================================================
+          SLIDER DOTS
+      ====================================================== */}
+
       <div className="mt-8 flex justify-center gap-2">
-        {[0, 1].map((dot) => (
+        {Array.from({
+          length: isMobile ? testimonials.length : 2,
+        }).map((_, dot) => (
           <button
             key={dot}
             type="button"
             onClick={() => setActive(dot)}
-            aria-label={`Show testimonial group ${dot + 1}`}
+            aria-label={
+              isMobile
+                ? `Show testimonial ${dot + 1}`
+                : `Show testimonial group ${dot + 1}`
+            }
             className={`h-2 rounded-full transition-all duration-500 ${
               active === dot
                 ? "w-7 bg-violet-600"
@@ -303,14 +370,17 @@ function TestimonialCard({
 }) {
   return (
     <article className="rounded-3xl border border-slate-200 bg-white p-7 shadow-[0_10px_35px_rgba(15,23,42,0.04)]">
+      {/* Rating */}
       <div className="text-sm tracking-[2px] text-violet-600">
         ★★★★★
       </div>
 
+      {/* Testimonial */}
       <p className="mt-5 min-h-[105px] text-[15px] leading-7 text-slate-600">
         “{testimonial.text}”
       </p>
 
+      {/* Client */}
       <div className="mt-7 flex items-center gap-3">
         <div className="relative h-11 w-11 overflow-hidden rounded-full bg-slate-100">
           <Image

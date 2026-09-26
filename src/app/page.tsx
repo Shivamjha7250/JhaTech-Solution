@@ -10,6 +10,10 @@ import {
   TestimonialsSlider,
 } from "@/components/HomeSliders";
 
+/* =========================================================
+   SERVICES
+========================================================= */
+
 const services = [
   {
     number: "01",
@@ -55,6 +59,10 @@ const services = [
   },
 ];
 
+/* =========================================================
+   DIFFERENTIATORS
+========================================================= */
+
 const differentiators = [
   {
     title: "Zero Vendor Lock-In",
@@ -73,6 +81,10 @@ const differentiators = [
     desc: "Bi-weekly sprint demos and transparent milestones keep you in control of scope, budget, and deployment schedules.",
   },
 ];
+
+/* =========================================================
+   PROCESS
+========================================================= */
 
 const process = [
   {
@@ -113,6 +125,10 @@ const process = [
   },
 ];
 
+/* =========================================================
+   FAQ
+========================================================= */
+
 const faqs = [
   {
     question: "Do I own 100% of the code and intellectual property?",
@@ -141,6 +157,10 @@ const faqs = [
   },
 ];
 
+/* =========================================================
+   HOME PAGE
+========================================================= */
+
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -150,12 +170,11 @@ export default function Home() {
 
   return (
     <main className="overflow-hidden bg-white font-sans text-slate-900 antialiased">
-
       {/* =====================================================
           HERO
       ====================================================== */}
-      <section className="relative overflow-hidden bg-white pb-16 pt-10 sm:pb-20 lg:pb-24 lg:pt-16">
 
+      <section className="relative overflow-hidden bg-white pb-16 pt-10 sm:pb-20 lg:pb-24 lg:pt-16">
         {/* Very subtle background */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute left-[-180px] top-[-140px] h-[450px] w-[450px] rounded-full bg-slate-100/70 blur-[120px]" />
@@ -173,10 +192,8 @@ export default function Home() {
         </div>
 
         <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:px-10">
-
           {/* Hero Content */}
           <div className="relative z-10">
-
             <div className="inline-flex items-center gap-2 rounded-full border border-violet-200 bg-violet-50 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-violet-700">
               <span className="relative flex h-1.5 w-1.5">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-violet-400 opacity-50" />
@@ -200,7 +217,6 @@ export default function Home() {
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
-
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-violet-600 to-blue-600 px-6 py-3 text-xs font-semibold text-white shadow-lg shadow-violet-500/20 transition duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-violet-500/20"
@@ -210,18 +226,16 @@ export default function Home() {
               </Link>
 
               <Link
-                href="/services"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-6 py-3 text-xs font-semibold text-slate-800 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-violet-300 hover:text-violet-600 hover:shadow-md"
               >
                 Explore Capabilities
               </Link>
-
             </div>
           </div>
 
           {/* Hero Image */}
           <div className="relative flex items-center justify-center">
-
             <div className="absolute h-[300px] w-[300px] rounded-full bg-slate-100/80 blur-[90px]" />
 
             <div className="relative w-full max-w-[560px]">
@@ -231,21 +245,18 @@ export default function Home() {
                 className="h-auto w-full object-contain drop-shadow-[0_20px_45px_rgba(15,23,42,0.12)]"
               />
             </div>
-
           </div>
-
         </div>
       </section>
 
       {/* =====================================================
           ABOUT
       ====================================================== */}
+
       <section className="relative bg-white py-16 lg:py-20">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16 lg:px-10">
-
           {/* Image */}
           <div className="relative flex items-center justify-center">
-
             <div className="absolute h-[280px] w-[280px] rounded-full bg-slate-100/70 blur-[90px]" />
 
             <img
@@ -253,12 +264,10 @@ export default function Home() {
               alt="Engineers collaborating at JhaTech Solution"
               className="relative h-auto w-full max-w-[520px] object-contain drop-shadow-xl"
             />
-
           </div>
 
           {/* Content */}
           <div>
-
             <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-violet-600">
               The Engineering Mindset
             </p>
@@ -276,7 +285,6 @@ export default function Home() {
             </p>
 
             <div className="mt-7 grid gap-3.5 sm:grid-cols-2">
-
               <div className="rounded-xl border border-slate-200 bg-slate-50/70 p-4 transition hover:border-violet-200 hover:bg-white hover:shadow-sm">
                 <h4 className="text-sm font-bold text-slate-900">
                   Modern Architecture
@@ -298,7 +306,6 @@ export default function Home() {
                   performance.
                 </p>
               </div>
-
             </div>
 
             <div className="mt-8">
@@ -309,20 +316,17 @@ export default function Home() {
                 Learn About Our Engineering Culture →
               </Link>
             </div>
-
           </div>
-
         </div>
       </section>
 
       {/* =====================================================
           SERVICES
       ====================================================== */}
+
       <section className="bg-slate-50 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-
           <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
-
             <div className="max-w-2xl">
               <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-violet-600">
                 Core Capabilities
@@ -333,27 +337,23 @@ export default function Home() {
               </h2>
             </div>
 
+            {/* NOW GOES TO CONTACT */}
             <Link
-              href="/services"
+              href="/contact"
               className="inline-flex items-center gap-2 text-sm font-semibold text-violet-700 transition hover:text-violet-600"
             >
               Browse Complete Catalog →
             </Link>
-
           </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-
             {services.map((service) => (
               <article
                 key={service.number}
                 className="group relative flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-violet-300 hover:shadow-lg hover:shadow-slate-200/70"
               >
-
                 <div>
-
                   <div className="flex items-center justify-between border-b border-slate-100 pb-4">
-
                     <span className="text-xs font-black tracking-tight text-violet-600">
                       {service.number}
                     </span>
@@ -361,7 +361,6 @@ export default function Home() {
                     <span className="rounded-full bg-violet-50 px-2.5 py-1 text-[10px] font-semibold text-violet-700">
                       {service.tag}
                     </span>
-
                   </div>
 
                   <h3 className="mt-5 text-lg font-bold tracking-tight text-slate-950 transition-colors group-hover:text-violet-600">
@@ -371,24 +370,20 @@ export default function Home() {
                   <p className="mt-2.5 text-[13px] leading-6 text-slate-600">
                     {service.description}
                   </p>
-
                 </div>
 
                 <div className="mt-6 border-t border-slate-100 pt-3.5">
-
+                  {/* ALL TECHNICAL SPECS GO TO CONTACT */}
                   <Link
-                    href="/services"
+                    href="/contact"
                     className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-900 transition group-hover:text-violet-600"
                   >
                     Technical Specs
                     <span>→</span>
                   </Link>
-
                 </div>
-
               </article>
             ))}
-
           </div>
         </div>
       </section>
@@ -396,11 +391,10 @@ export default function Home() {
       {/* =====================================================
           WHY CHOOSE US
       ====================================================== */}
+
       <section className="border-y border-slate-200/80 bg-white py-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-
           <div className="max-w-2xl">
-
             <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-violet-600">
               Why Partner With Us
             </p>
@@ -408,17 +402,14 @@ export default function Home() {
             <h2 className="mt-2.5 text-2xl font-bold leading-tight tracking-tight text-slate-950 sm:text-3xl">
               Reliable delivery designed to de-risk your investment.
             </h2>
-
           </div>
 
           <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-
             {differentiators.map((diff, i) => (
               <div
                 key={i}
                 className="rounded-xl border border-slate-200 bg-slate-50/60 p-5 transition duration-300 hover:-translate-y-1 hover:border-violet-200 hover:bg-white hover:shadow-md"
               >
-
                 <span className="text-xl font-black text-slate-300">
                   0{i + 1}
                 </span>
@@ -430,10 +421,8 @@ export default function Home() {
                 <p className="mt-2 text-[13px] leading-5 text-slate-600">
                   {diff.desc}
                 </p>
-
               </div>
             ))}
-
           </div>
         </div>
       </section>
@@ -441,9 +430,9 @@ export default function Home() {
       {/* =====================================================
           TECHNOLOGY
       ====================================================== */}
+
       <section className="bg-white py-16">
         <div className="mx-auto max-w-7xl px-5 text-center sm:px-8 lg:px-10">
-
           <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-violet-600">
             Battle-Tested Architecture
           </p>
@@ -456,7 +445,6 @@ export default function Home() {
             We avoid short-lived trends in favor of mature, highly maintainable
             production ecosystems.
           </p>
-
         </div>
 
         <div className="mt-10">
@@ -467,11 +455,10 @@ export default function Home() {
       {/* =====================================================
           PROCESS
       ====================================================== */}
+
       <section className="bg-slate-50 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-
           <div className="max-w-2xl">
-
             <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-violet-600">
               Methodology
             </p>
@@ -479,19 +466,15 @@ export default function Home() {
             <h2 className="mt-2.5 text-2xl font-bold leading-tight tracking-tight text-slate-950 sm:text-3xl lg:text-4xl">
               An unyielding process from discovery to zero-downtime scale.
             </h2>
-
           </div>
 
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-
             {process.map((step) => (
               <div
                 key={step.number}
                 className="relative rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-violet-300 hover:shadow-lg hover:shadow-slate-200/60"
               >
-
                 <div className="flex items-center justify-between">
-
                   <span className="text-lg font-black text-violet-600">
                     {step.number}
                   </span>
@@ -499,7 +482,6 @@ export default function Home() {
                   <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">
                     {step.phase}
                   </span>
-
                 </div>
 
                 <h3 className="mt-3.5 text-base font-bold text-slate-950">
@@ -509,49 +491,19 @@ export default function Home() {
                 <p className="mt-2 text-[13px] leading-6 text-slate-600">
                   {step.text}
                 </p>
-
               </div>
             ))}
-
           </div>
         </div>
       </section>
-
-      {/* =====================================================
-          CLIENTS
-      ======================================================
-      <section className="border-b border-slate-200 bg-white py-16">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-
-          <div className="text-center">
-
-            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-violet-600">
-              Trusted Partnerships
-            </p>
-
-            <h2 className="mt-2.5 text-2xl font-bold leading-tight tracking-tight text-slate-950 sm:text-3xl">
-              Organizations we have empowered to grow.
-            </h2>
-
-          </div>
-
-          <div className="mt-10">
-            <ClientLogoSlider />
-          </div>
-
-        </div>
-      </section>
-      
- */}
 
       {/* =====================================================
           TESTIMONIALS
       ====================================================== */}
+
       <section className="bg-slate-50 py-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-
           <div className="mx-auto max-w-2xl text-center">
-
             <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-violet-600">
               Client Feedback
             </p>
@@ -559,24 +511,21 @@ export default function Home() {
             <h2 className="mt-2.5 text-2xl font-bold leading-tight tracking-tight text-slate-950 sm:text-3xl">
               Proven results verified by founders and CTOs.
             </h2>
-
           </div>
 
           <div className="mt-10">
             <TestimonialsSlider />
           </div>
-
         </div>
       </section>
 
       {/* =====================================================
           FAQ
       ====================================================== */}
+
       <section className="border-t border-slate-200 bg-white py-16 lg:py-20">
         <div className="mx-auto max-w-4xl px-5 sm:px-8 lg:px-10">
-
           <div className="text-center">
-
             <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-violet-600">
               Frequently Asked Questions
             </p>
@@ -584,11 +533,9 @@ export default function Home() {
             <h2 className="mt-2.5 text-2xl font-bold leading-tight tracking-tight text-slate-950 sm:text-3xl">
               Everything you need to know before starting.
             </h2>
-
           </div>
 
           <div className="mt-10 space-y-3">
-
             {faqs.map((faq, index) => {
               const isOpen = openFaq === index;
 
@@ -597,13 +544,11 @@ export default function Home() {
                   key={index}
                   className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50/50 transition-colors hover:border-slate-300"
                 >
-
                   <button
                     onClick={() => toggleFaq(index)}
                     className="flex w-full items-center justify-between p-5 text-left"
                     aria-expanded={isOpen}
                   >
-
                     <span className="pr-4 text-sm font-bold text-slate-900 sm:text-base">
                       {faq.question}
                     </span>
@@ -615,7 +560,6 @@ export default function Home() {
                     >
                       ↓
                     </span>
-
                   </button>
 
                   {isOpen && (
@@ -623,25 +567,18 @@ export default function Home() {
                       {faq.answer}
                     </div>
                   )}
-
                 </div>
               );
             })}
-
           </div>
         </div>
       </section>
 
       {/* =====================================================
-          FINAL CTA
-      ====================================================== */}
-     
-
-      {/* =====================================================
           FOOTER
       ====================================================== */}
-      <Footer />
 
+      <Footer />
     </main>
   );
 }
